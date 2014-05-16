@@ -27,6 +27,8 @@ gem "less-rails"
 #gem "twitter-bootstrap-rails", :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem "font-awesome-rails"
 
+gem "devise"
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 

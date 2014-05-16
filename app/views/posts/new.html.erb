@@ -1,64 +1,62 @@
-<div class="container main-container" >
-	<div class="row">
-		<div id="post-collection" class="col-md-8" style="min-height: 1000px;">
-			<div class="row post-container">
-				<article>
-					<header class="post-header">
-						<h2 class="post-title">
-							<a href="#" ><%= @post.title %></a>
-						</h2>
+<div class="row">
+	<div id="post-collection" class="col-md-8" style="min-height: 1000px;">
+		<div class="row post-container">
+			<article>
+				<header class="post-header">
+					<h2 class="post-title">
+						<a href="#" ><%= @post.title %></a>
+					</h2>
 
-						<div class="post-vote">
-							<div class="post-action-list">
-								<div class="post-action">
-									<ul class="list-unstyled">
-										<li>
-											<a href="javascript:void(0)" >
-												<i class="icon-thumbs-up-alt icon-2x"></i>
-											</a>
-										</li>
-										<li>
-											<a href="javascript:void(0)">
-												<span class="vote-counter">7777</span>
-											</a>
-										</li>
-										<li>
-											<a href="javascript:void(0)" >
-												<i class="icon-thumbs-down-alt icon-2x"></i>
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="post-action">
-									<!-- comment -->
-								</div>
+					<div class="post-vote">
+						<div class="post-action-list">
+							<div class="post-action">
+								<ul class="list-unstyled">
+									<li>
+										<a href="javascript:void(0)" >
+											<i class="icon-thumbs-up-alt icon-2x"></i>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)">
+											<span class="vote-counter">7777</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0)" >
+											<i class="icon-thumbs-down-alt icon-2x"></i>
+										</a>
+									</li>
+								</ul>
 							</div>
-						</div>
-					</header>
-
-					<div class="row">
-						<div class="col-md-10" style="max-width:80%">
-							<%= image_tag @post.photo.url(:medium), :class => "img-rounded"%>
+							<div class="post-action">
+								<!-- comment -->
+							</div>
 						</div>
 					</div>
+				</header>
 
-					<div class="row">
-						<div class="col-md-10 share" style="border: none;">
-							<div class="share-count">
-								<p><strong>999</strong> shares</p> 
-							</div>
+				<div class="row">
+					<div class="col-md-10" style="max-width:80%">
+						<%= image_tag @post.photo.url(:medium), :class => "img-rounded"%>
+					</div>
+				</div>
 
-							<ul class="list-unstyled">
-								<li><a class="facebook" href="javascript:void(0)"></a></li>
-								<li><a class="twitter" href="javascript:void(0)"></a></li>
-								<li><a class="google-plus" href="javascript:void(0)"></a></li>
-								<li><a class="pinterest" href="javascript:void(0)"></a></li>
-								<li><a class="email" href="javascript:void(0)"></a></li>
-							</ul>
+				<div class="row">
+					<div class="col-md-10 share" style="border: none;">
+						<div class="share-count">
+							<p><strong>999</strong> shares</p> 
 						</div>
-					</div>	
-				</article>
-			</div>
+
+						<ul class="list-unstyled">
+							<li><a class="facebook" href="javascript:void(0)"></a></li>
+							<li><a class="twitter" href="javascript:void(0)"></a></li>
+							<li><a class="google-plus" href="javascript:void(0)"></a></li>
+							<li><a class="pinterest" href="javascript:void(0)"></a></li>
+							<li><a class="email" href="javascript:void(0)"></a></li>
+						</ul>
+					</div>
+				</div>	
+			</article>
 		</div>
-	</div>	
-	</div> <!-- /container -->
+	</div>
+</div>

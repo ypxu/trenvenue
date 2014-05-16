@@ -1,5 +1,6 @@
 Questso::Application.routes.draw do
 
+  devise_for :users
   resources :posts
   put 'posts/:id/upvote', to: 'posts#upvote', constraints: {id: /\d+/}
   put 'posts/:id/downvote', to: 'posts#downvote', constraints: {id: /\d+/}
@@ -17,6 +18,8 @@ Questso::Application.routes.draw do
   match "/signin", to: "users#signin", via: "get"
 
   resources :users
+
+  root to: "list#latest"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
