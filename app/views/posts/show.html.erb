@@ -65,4 +65,18 @@
 			</article>
 		</div>
 	</div>
+
+	<div class="col-md-4" style="margin-top: 20px; min-height: 1000px;">
+		<!-- Right-hand column -->
+		<!-- Ads columns, relavent posts-->
+
+    <div id="ads-collection">
+      <%= render collection: @posts, partial: "ad" %>
+    </div>
+
+    <div id="thumb-collection">
+      <%= render collection: @posts, partial: "thumb" %>
+    </div>
+	</div>
+
 </div>

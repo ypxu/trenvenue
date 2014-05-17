@@ -2,7 +2,7 @@ development:
   adapter: postgresql
   database: questso_app
   username: questso
-  password: root
+  password: XXXX
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -12,7 +12,7 @@ test:
   adapter: postgresql
   database: questso_app_test
   username: questso
-  password: root
+  password: XXXX
   host: localhost
 
 # TODO: Production need to reconfig
