@@ -13,17 +13,17 @@
 								<ul class="list-unstyled">
 									<li>
 										<a href="javascript:void(0)" >
-											<i class="icon-thumbs-up-alt icon-2x"></i>
+											<i class="icon-thumbs-up-alt icon-2x icon-upvote" data-id="<%= @post.id %>"></i>
 										</a>
 									</li>
 									<li>
 										<a href="javascript:void(0)">
-											<span class="vote-counter">7777</span>
+											<span class="vote-counter"><%= @post.vote_count %></span>
 										</a>
 									</li>
 									<li>
 										<a href="javascript:void(0)" >
-											<i class="icon-thumbs-down-alt icon-2x"></i>
+											<i class="icon-thumbs-down-alt icon-2x icon-downvote" data-id="<%= @post.id %>"></i>
 										</a>
 									</li>
 								</ul>
