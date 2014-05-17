@@ -35,4 +35,12 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find_by(:id=>[params[:id]])
+    @post.destroy
+    respond_to do |format|
+      format.json { render :json => @post }
+    end
+  end
+
 end

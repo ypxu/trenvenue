@@ -27,4 +27,14 @@ $(function(){
     });
   });
 
+  $(".icon-delete-post").click(function(){
+    var id = $(this).data("id");
+    $.ajax({
+      type: 'DELETE',
+      url: '/posts/' + id,
+      success: function(data){
+        document.location.href = '/';
+      }
+    });
+  });
 });

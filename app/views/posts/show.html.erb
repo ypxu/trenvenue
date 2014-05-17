@@ -54,7 +54,13 @@
 							<li><a class="pinterest" href="javascript:void(0)"></a></li>
 							<li><a class="email" href="javascript:void(0)"></a></li>
 						</ul>
+
 					</div>
+            <% if user_signed_in? %>
+              <div>
+                <p><a class="btn btn-danger float-right icon-delete-post" data-id="<%= @post.id %>">Delete</a></p>
+              </div>
+            <% end %>
 				</div>	
 			</article>
 		</div>
