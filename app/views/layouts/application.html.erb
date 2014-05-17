@@ -40,6 +40,17 @@
 						<%= image_tag "logo.png", :alt => "Trenvenue", :title => "Trenvenue"%>
 					</a>
 				</div>			
+          <div class="navbar-right">
+            <div style="margin-top: 20px;">
+            <% if user_signed_in? %>
+                <a data-toggle="modal" href="#uploadModal" class="btn btn-danger">Upload</a>
+                <%= link_to('Sign Out', destroy_user_session_path, :method => :delete, :class => 'btn btn-default') %>
+            <% else %>
+                <%= link_to("Join Us", new_user_registration_path, :class => 'btn btn-success') %>
+                <%= link_to('Sign In', new_user_session_path, :class => 'btn btn-default')  %>
+            <% end %>
+            </div>
+          </div>
 				<!--  TODO: comment out navigation for now. until find better way to do it
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
@@ -75,13 +86,6 @@
 		<div class="container">
 			<!-- Ads Placeholder, Site social Placeholder -->
 			<div class="right-block">		
-  			<% if user_signed_in? %>
-  				<a data-toggle="modal" href="#uploadModal" class="btn btn-danger">Upload</a>
-	          	<%= link_to('Sign Out', destroy_user_session_path, :method => :delete, :class => 'btn btn-danger') %>
-        	<% else %>
-              <%= link_to("Join Us", new_user_registration_path, :class => 'btn btn-success') %>
-          		<%= link_to('Sign In', new_user_session_path, :class => 'btn btn-default')  %>
-    	    <% end %>				
 			</div>
 		</div>
 	</div>
