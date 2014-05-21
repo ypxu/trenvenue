@@ -6,12 +6,12 @@
 $(function(){
 
   $(".icon-upvote").click(function(){
-    var id = $(this).data('id');
+    var id = $(this).data('id')
     $.ajax({
       type: 'PUT',
-      url: '/posts/' + id + '/upvote',
+      url: '/posts/' + id + '/upvote.json',
       success: function(data){
-        $(".vote-counter").html(data['vote_count'])
+        $(".vote-counter-" + id).html(data['vote_count'])
       }
     });
   });
@@ -20,9 +20,9 @@ $(function(){
     var id = $(this).data('id');
     $.ajax({
       type: 'PUT',
-      url: '/posts/' + id + '/downvote',
+      url: '/posts/' + id + '/downvote.json',
       success: function(data){
-        $(".vote-counter").html(data['vote_count'])
+        $(".vote-counter-" + id).html(data['vote_count'])
       }
     });
   });
@@ -31,7 +31,7 @@ $(function(){
     var id = $(this).data("id");
     $.ajax({
       type: 'DELETE',
-      url: '/posts/' + id,
+      url: '/posts/' + id + '.json',
       success: function(data){
         document.location.href = '/';
       }

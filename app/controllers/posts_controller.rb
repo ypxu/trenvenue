@@ -13,7 +13,7 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.find_by(:id=>[params[:id]])
-		render 'show'
+		respond_with @post
 	end
 
   def upvote
@@ -38,9 +38,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find_by(:id=>[params[:id]])
     @post.destroy
-    respond_to do |format|
-      format.json { render :json => @post }
-    end
+    respond_with @post
   end
 
 end
