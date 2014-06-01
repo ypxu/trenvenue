@@ -1,3 +1,12 @@
+
+<% content_for :head do %>
+	<meta property="og:title" content="<%= @post.title %>"></meta>
+	<meta property="og:description" content="<%= @post.description %>"></meta>
+	<meta property="og:image" content="<%= @post.photo.url(:medium) %>"></meta>
+	<meta property="fb:app_id" content=""></meta>	
+<% end %>
+
+
 <div class="row">
 	<div id="post-collection" class="col-md-8" style="min-height: 1000px;">
 		<div class="row post-container">
@@ -48,7 +57,8 @@
 						</div>
 
 						<ul class="list-unstyled">
-							<li><a class="facebook" href="javascript:void(0)"></a></li>
+							<li><a class="facebook facebook-share" href="javascript:void(0)"
+							       data-url="<%= post_url(@post) %>"></a></li>
 							<li><a class="twitter" href="javascript:void(0)"></a></li>
 							<li><a class="google-plus" href="javascript:void(0)"></a></li>
 							<li><a class="pinterest" href="javascript:void(0)"></a></li>

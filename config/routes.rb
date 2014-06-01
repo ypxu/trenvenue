@@ -17,6 +17,8 @@ Questso::Application.routes.draw do
   match "/signup", to: "users#signup", via: "get"
   match "/signin", to: "users#signin", via: "get"
 
+  match "/close", to: "static#close", via: "get"
+
   resources :users
 
   root to: "list#latest"
