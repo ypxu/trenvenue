@@ -38,7 +38,7 @@ $(function(){
   });
 
   $(".facebook-share").click(function(){
-    var url = $(this).data(url) || '';
+    var url = $(this).data("url") || '';
     if(url) {
       share_to_facebook(url, 550, 400)
     }
