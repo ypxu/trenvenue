@@ -1,9 +1,10 @@
 
 <% content_for :head do %>
+
 	<meta property="og:title" content="<%= @post.title %>"></meta>
 	<meta property="og:description" content="<%= @post.description %>"></meta>
-	<meta property="og:image" content="<%= @post.photo.url(:medium) %>"></meta>
-	<meta property="fb:app_id" content=""></meta>	
+	<meta property="og:image" content="<%= post_photo_url(@post.photo) %>"></meta>
+	<meta property="fb:app_id" content="471240789685989"></meta>
 <% end %>
 
 
